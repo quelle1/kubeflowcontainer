@@ -1,0 +1,1 @@
+FROM gcr.io/kubeflow-images-public/tf-model-server-gpu:v20180327-995786ec
