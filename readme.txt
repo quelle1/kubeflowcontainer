@@ -9,3 +9,6 @@ FROM gcr.io/kubeflow-images-public/tf-model-server-cpu:v20180327-995786ec
 FROM gcr.io/kubeflow-images-public/tf-model-server-gpu:v20180327-995786ec
 FROM gcr.io/kubeflow-images-public/tf-model-server-http-proxy:v20180327-995786ec
 FROM gcr.io/kubeflow-images-staging/tf_operator:v20180329-a7511ff
+FROM gcr.io/tf-on-k8s-dogfood/tf_sample:dc944ff
+
+FROM gcr.io/tf-on-k8s-dogfood/tf_sample_gpu:dc944ff
