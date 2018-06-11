@@ -12,3 +12,25 @@ FROM gcr.io/kubeflow-images-staging/tf_operator:v20180329-a7511ff
 FROM gcr.io/tf-on-k8s-dogfood/tf_sample:dc944ff
 
 FROM gcr.io/tf-on-k8s-dogfood/tf_sample_gpu:dc944ff
+
+
+
+
+docker pull quelle/tensorflow-1.7.0-notebook-gpu:latest
+docker tag quelle/tensorflow-1.7.0-notebook-gpu:latest  gcr.io/kubeflow-images-public/tensorflow-1.7.0-notebook-gpu:latest
+docker save -o gcr.io-kubeflow-images-public-tensorflow-1.7.0-notebook-gpu_latest gcr.io/kubeflow-images-public/tensorflow-1.7.0-notebook-gpu:latest
+
+docker pull quelle/issue-summarization-ui:0.1
+docker tag quelle/issue-summarization-ui:0.1 gcr.io/gcr-repository-name/issue-summarization-ui:0.1
+docker save -o gcr.io-gcr-repository-name-issue-summarization-ui_0.1 gcr.io/gcr-repository-name/issue-summarization-ui:0.1
+docker pull quelle/kubeflow-download:latest
+docker run -it -v
+
+
+
+FROM gcr.io/kubeflow-images-public/tensorflow-1.7.0-notebook-cpu:latest
+
+
+
+
+
