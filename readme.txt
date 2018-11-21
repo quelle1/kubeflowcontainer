@@ -31,6 +31,50 @@ docker run -it -v
 FROM gcr.io/kubeflow-images-public/tensorflow-1.7.0-notebook-cpu:latest
 
 
+v0.2.0
+image: gcr.io/kubeflow/jupyterhub-k8s:v20180531-3bb991b1
+image: seldonio/cluster-manager:0.2.1
+image: redis:4.0.1
+image: gcr.io/kubeflow-images-public/tf_operator:v20180724-13863edf
+image: quay.io/datawire/ambassador:0.37.0
+image: quay.io/datawire/statsd:0.37.0
+image: argoproj/workflow-controller:latest
+image: argoproj/argoui:latest
+image: gcr.io/kubeflow-images-public/centraldashboard:v0.2.1
+image: gcr.io/kubeflow-images-public/tensorflow-1.4.1-notebook-cpu:v0.2.1
+image: gcr.io/kubeflow-images-public/tensorflow-1.4.1-notebook-gpu:v0.2.1
+image: gcr.io/kubeflow-images-public/tensorflow-1.7.1-notebook-cpu:v0.2.1
+image: gcr.io/kubeflow-images-public/tensorflow-1.7.1-notebook-gpu:v0.2.1
+
+docker pull quelle/statsd:v0.37.0
+docker pull quelle/ambassador:v0.37.0
+docker pull quelle/jupyterhub-k8s:v20180531-3bb991b1
+docker pull quelle/tf_operator:v20180724-13863edf
+docker pull quelle/centraldashboard:v0.2.1
+docker pull quelle/tensorflow-1.4.1-notebook-cpu:v0.2.1
+docker pull quelle/tensorflow-1.4.1-notebook-gpu:v0.2.1
+
+docker save -o  quelle-statsd-0.37.0.tar quelle/statsd:v0.37.0
+docker save -o  quelle-ambassador:0.37.0.tar quelle/ambassador:v0.37.0
+docker save -o  quelle-jupyterhub-k8s:v20180531-3bb991b1.tar quelle/jupyterhub-k8s:v20180531-3bb991b1
+docker save -o  quelle-tf_operator-v20180724-13863edf.tar quelle/tf_operator:v20180724-13863edf
+docker save -o kubeflow-tensorflow-1.4.1-notebook-cpu-v0.2.1.tar quelle/tensorflow-1.4.1-notebook-cpu:v0.2.1
+docker save -o kubeflow-tensorflow-1.4.1-notebook-gpu-v0.2.1.tar  quelle/tensorflow-1.4.1-notebook-gpu:v0.2.1
+
+docker load -i kubeflow-tensorflow-1.4.1-notebook-cpu-v0.2.1.tar
+docker load -i kubeflow-tensorflow-1.4.1-notebook-gpu-v0.2.1.tar
+docker  load -i  quelle-statsd-0.37.0.tar 
+docker  load -i  quelle-ambassador:0.37.0.tar 
+docker  load -i  quelle-jupyterhub-k8s:v20180531-3bb991b1.tar 
+docker  load -i  quelle-tf_operator-v20180724-13863edf.tar 
+
+docker  tag quelle/statsd:v0.37.0   quay.io/datawire/statsd:0.37.0
+docker  tag quelle/ambassador:v0.37.0 quay.io/datawire/ambassador:0.37.0
+docker  tag quelle/jupyterhub-k8s:v20180531-3bb991b1   gcr.io/kubeflow/jupyterhub-k8s:v20180531-3bb991b1
+docker  tag quelle/tf_operator:v20180724-13863edf  gcr.io/kubeflow-images-public/tf_operator:v20180724-13863edf
+docker  tag quelle/centraldashboard:v0.2.1 gcr.io/kubeflow-images-public/centraldashboard:v0.2.1
+docker  tag quelle/tensorflow-1.4.1-notebook-cpu:v0.2.1 gcr.io/kubeflow-images-public/tensorflow-1.4.1-notebook-cpu:v0.2.1
+docker  tag quelle/tensorflow-1.4.1-notebook-gpu:v0.2.1 gcr.io/kubeflow-images-public/tensorflow-1.4.1-notebook-gpu:v0.2.1
 
 
 
