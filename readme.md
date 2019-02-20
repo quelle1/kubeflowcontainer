@@ -78,6 +78,7 @@ docker  tag quelle/tensorflow-1.4.1-notebook-gpu:v0.2.1 gcr.io/kubeflow-images-p
 
 
 ## katib
+```
 [yanml@localhost kubeflow_master-k8s_1.9.1-20181221]$ ks param list
 COMPONENT        PARAM                               VALUE
 =========        =====                               =====
@@ -100,3 +101,4 @@ pytorch-operator name                                "pytorch-operator"
 pytorch-operator pytorchDefaultImage                 "null"
 pytorch-operator pytorchJobImage                     "gcr.io/kubeflow-images-public/pytorch-operator:v0.4.0"
 pytorch-operator pytorchJobVersion                   "v1beta1"
+```
