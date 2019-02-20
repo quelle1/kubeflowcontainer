@@ -1,0 +1,2 @@
+#suggestion-random
+FROM gcr.io/kubeflow-images-public/katib/suggestion-random:v0.1.2-alpha-98-g07e0fd2

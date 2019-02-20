@@ -1,0 +1,2 @@
+# suggestion-hyperband
+FROM gcr.io/kubeflow-images-public/katib/suggestion-hyperband:v0.1.2-alpha-98-g07e0fd2

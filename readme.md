@@ -77,7 +77,26 @@ docker  tag quelle/tensorflow-1.4.1-notebook-cpu:v0.2.1 gcr.io/kubeflow-images-p
 docker  tag quelle/tensorflow-1.4.1-notebook-gpu:v0.2.1 gcr.io/kubeflow-images-public/tensorflow-1.4.1-notebook-gpu:v0.2.1
 
 
-
-
-
-
+## katib
+[yanml@localhost kubeflow_master-k8s_1.9.1-20181221]$ ks param list
+COMPONENT        PARAM                               VALUE
+=========        =====                               =====
+katib            katibUIImage                        "gcr.io/kubeflow-images-public/katib/katib-ui:v0.1.2-alpha-100-gbca0b58"
+katib            metricsCollectorImage               "gcr.io/kubeflow-images-public/katib/metrics-collector:v0.1.2-alpha-100-gbca0b58"
+katib            name                                "katib"
+katib            studyJobControllerImage             "gcr.io/kubeflow-images-public/katib/studyjob-controller:v0.1.2-alpha-100-gbca0b58"
+katib            suggestionBayesianOptimizationImage "gcr.io/kubeflow-images-public/katib/suggestion-bayesianoptimization:v0.1.2-alpha-98-g07e0fd2"
+katib            suggestionGridImage                 "gcr.io/kubeflow-images-public/katib/suggestion-grid:v0.1.2-alpha-98-g07e0fd2"
+katib            suggestionHyperbandImage            "gcr.io/kubeflow-images-public/katib/suggestion-hyperband:v0.1.2-alpha-98-g07e0fd2"
+katib            suggestionRandomImage               "gcr.io/kubeflow-images-public/katib/suggestion-random:v0.1.2-alpha-98-g07e0fd2"
+katib            vizierCoreImage                     "gcr.io/kubeflow-images-public/katib/vizier-core:v0.1.2-alpha-100-gbca0b58"
+katib            vizierCoreRestImage                 "gcr.io/kubeflow-images-public/katib/vizier-core-rest:v0.1.2-alpha-100-gbca0b58"
+katib            vizierDbImage                       "mysql:8.0.3"
+pytorch-operator cloud                               "null"
+pytorch-operator deploymentNamespace                 "null"
+pytorch-operator deploymentScope                     "cluster"
+pytorch-operator disks                               "null"
+pytorch-operator name                                "pytorch-operator"
+pytorch-operator pytorchDefaultImage                 "null"
+pytorch-operator pytorchJobImage                     "gcr.io/kubeflow-images-public/pytorch-operator:v0.4.0"
+pytorch-operator pytorchJobVersion                   "v1beta1"
