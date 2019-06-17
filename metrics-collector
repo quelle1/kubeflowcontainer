@@ -1,2 +1,2 @@
 # metrics-collector
-FROM gcr.io/kubeflow-images-public/katib/metrics-collector:v0.1.2-alpha-100-gbca0b58
+FROM gcr.io/kubeflow-images-public/katib/metrics-collector:v0.4.0

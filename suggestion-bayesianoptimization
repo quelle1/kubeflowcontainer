@@ -1,2 +1,2 @@
 #suggestion-bayesianoptimization
-FROM gcr.io/kubeflow-images-public/katib/suggestion-bayesianoptimization:v0.1.2-alpha-98-g07e0fd2
+FROM gcr.io/kubeflow-images-public/katib/suggestion-bayesianoptimization:v0.4.0
